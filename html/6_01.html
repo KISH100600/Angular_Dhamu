@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6_01</title>
+    <style>
+      .container {
+        background-color: aqua;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        overflow: hidden;
+      }
+      .parent1 {
+        /* background-color: brown; */
+        /* padding: 50px;
+        margin: 50px; */
+        /* width: 30%; */
+        /* border: 2px red solid; */
+        /* border-radius: 50%; */
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+      }
+      .parent2 {
+        background-color: rgb(241, 190, 37);
+        padding: 50px;
+        margin: 50px;
+        width: 30%;
+        border: 2px red solid;
+        border-radius: 50%;
+      }
+      .parent3 {
+        background-color: rgb(120, 13, 252);
+        padding: 50px;
+        margin: 50px;
+        width: 30%;
+        border: 2px red solid;
+        border-radius: 50%;
+      }
+      .child {
+        background-color: yellow;
+        padding-inline: 2%;
+        border: 5px red solid;
+        margin: 2%;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div style="width: 40%"></div>
+      <div class="parent1">
+        <div class="child">
+          <a>link 1</a>
+        </div>
+        <div class="child">
+          <a>Link 2</a>
+        </div>
+        <div class="child">
+          <a>Link 3</a>
+        </div>
+        <div class="child">
+          <a>Link 3</a>
+        </div>
+        <div class="child">
+          <a>Link 3</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
