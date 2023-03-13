@@ -1,0 +1,12 @@
+<html>
+  <body>
+    <h1 id="nonhover" style="display: block">This is a non hover element</h1>
+    <h1 id="hover" style="display: none">This is a hover element</h1>
+    <button
+      onmouseover="document.getElementById('nonhover').style.display = 'none';document.getElementById('hover').style.display = 'block'"
+      onmouseout="document.getElementById('hover').style.display = 'none';document.getElementById('nonhover').style.display = 'block'"
+    >
+      Hover me
+    </button>
+  </body>
+</html>
