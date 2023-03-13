@@ -8,7 +8,9 @@ console.log(val1 != val2);
 // } else {
 //   fn2;
 // }
-const obj = { name: "kish" };
+{
+  /* const obj = { name: "kish" }; */
+}
 const val = val1 ? 5 : 10;
 console.log(obj.name instanceof obj);
 
