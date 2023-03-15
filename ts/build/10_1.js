@@ -1,0 +1,13 @@
+"use strict";
+let userName = [1, 2, '34', false];
+const password = 23;
+let user = 'jd';
+user = [45];
+let boolData = true;
+boolData = false;
+let mobile = '';
+mobile = 'jd';
+let email;
+let pass;
+let pass1 = null;
+console.log(userName, password, user, boolData, mobile, pass, pass1);
