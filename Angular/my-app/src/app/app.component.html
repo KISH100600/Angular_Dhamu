@@ -1,10 +1,10 @@
-<h1>Welcome</h1>
+<!-- <h1>Welcome</h1>
 
 <h1>{{ title }}</h1>
 <h1>{{ name }}</h1>
 <h1>{{ getAge() }}</h1>
 
-<!-- <img [src]="image" alt="jdjd" /> -->
+<img [src]="image" alt="jdjd" />
 
 <div *ngIf="getAge() > 10">
   <h1>age is greater</h1>
@@ -32,7 +32,6 @@
 <ng-template #elseBlock>
   Content to render when the condition is false.
 </ng-template>
-<!-- <br /> -->
 
 <div *ngIf="loading; else noLoading">
   <h1 class="card1">Loading.....</h1>
@@ -50,9 +49,7 @@
         <th>Age</th>
         <th>Address</th>
       </tr>
-      <!-- <div class="cardcontainer"> -->
       <tr *ngFor="let item of userData; index as i">
-        <!-- <tr> -->
         <td
           [ngStyle]="
             (i + 1) % 2 == 0 ? { color: 'red', background: 'white' } : null
@@ -82,14 +79,9 @@
           {{ item.address }}
         </td>
       </tr>
-      <!-- <div class="card">
-          <h2>This is a name : {{ item.name }}</h2>
-          <h2>This is age : {{ item.age }}</h2>
-        </div> -->
-      <!-- </div> -->
+      
     </table>
 
-    <!-- </div> -->
     <button
       (click)="removeData()"
       style="background: green; color: antiquewhite"
@@ -106,3 +98,29 @@
     </button>
   </ng-template>
 </ng-template>
+<form>
+  <input type="email" [formControl]="email" />
+
+  <h1>{{ email.value }}</h1>
+
+  <button type="submit" (click)="updateEmail()">change Email</button>
+</form> -->
+
+<select #customSelect (change)="selectMethod(customSelect.value)">
+  <option *ngFor="let item of userData" value="{{ item.name }}">
+    {{ item.name }}
+  </option>
+</select>
+
+<p>
+  {{ selectedName }}
+</p>
+
+<div [ngSwitch]="selectedName">
+  <div *ngSwitchCase="'kish'">this is the name kish</div>
+  <div *ngSwitchCase="'user 1'">this is the name user 1</div>
+  <div *ngSwitchCase="'user 2'">this is the name user 2</div>
+  <div *ngSwitchDefault>output2</div>
+</div>
+
+<app-josh-first></app-josh-first>
