@@ -10,3 +10,45 @@ h1 {
 #title {
     color: blue;
 }
+
+.card {
+    background: #ff9393;
+    border: 5px solid black;
+    /* margin: 5px; */
+    padding: 10px;
+    border-radius: 10px;
+    width: 90%;
+}
+
+.card1 {
+    background: #d80d0d;
+    border: 5px solid rgb(0, 0, 0);
+    /* margin: 5px; */
+    padding: 10px;
+    border-radius: 10px;
+    width: 97%;
+    text-align: center;
+    font-size: 30px;
+    color: antiquewhite;
+}
+
+.cardcontainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
+table {
+    background: #f07878;
+    width: 100%;
+}
+
+th {
+    background-color: chartreuse;
+
+}
+
+td {
+    text-align: center;
+}

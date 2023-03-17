@@ -32,3 +32,77 @@
 <ng-template #elseBlock>
   Content to render when the condition is false.
 </ng-template>
+<!-- <br /> -->
+
+<div *ngIf="loading; else noLoading">
+  <h1 class="card1">Loading.....</h1>
+  <button (click)="getData()" style="background: green; color: antiquewhite">
+    get Data
+  </button>
+</div>
+
+<ng-template #noLoading>
+  <div *ngIf="userData.length; else noUserData">
+    <table>
+      <tr>
+        <th>S.No</th>
+        <th>User Name</th>
+        <th>Age</th>
+        <th>Address</th>
+      </tr>
+      <!-- <div class="cardcontainer"> -->
+      <tr *ngFor="let item of userData; index as i">
+        <!-- <tr> -->
+        <td
+          [ngStyle]="
+            (i + 1) % 2 == 0 ? { color: 'red', background: 'white' } : null
+          "
+        >
+          {{ i + 1 }}
+        </td>
+        <td
+          [ngStyle]="
+            (i + 1) % 2 == 0 ? { color: 'red', background: 'white' } : null
+          "
+        >
+          {{ item.name }}
+        </td>
+        <td
+          [ngStyle]="
+            (i + 1) % 2 == 0 ? { color: 'red', background: 'white' } : null
+          "
+        >
+          {{ item.age }}
+        </td>
+        <td
+          [ngStyle]="
+            (i + 1) % 2 == 0 ? { color: 'red', background: 'white' } : null
+          "
+        >
+          {{ item.address }}
+        </td>
+      </tr>
+      <!-- <div class="card">
+          <h2>This is a name : {{ item.name }}</h2>
+          <h2>This is age : {{ item.age }}</h2>
+        </div> -->
+      <!-- </div> -->
+    </table>
+
+    <!-- </div> -->
+    <button
+      (click)="removeData()"
+      style="background: green; color: antiquewhite"
+    >
+      remove Data
+    </button>
+  </div>
+
+  <ng-template #noUserData>
+    <div class="card1">userData not found</div>
+    <br />
+    <button (click)="getData()" style="background: green; color: antiquewhite">
+      get Data
+    </button>
+  </ng-template>
+</ng-template>
