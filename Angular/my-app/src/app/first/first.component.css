@@ -1,0 +1,20 @@
+.parent {
+    background: orange;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.parentcontainer {
+    background: rgb(0, 255, 221);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+:host {
+    font-style: italic;
+    color: #d80d0d;
+}

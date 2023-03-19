@@ -8,6 +8,7 @@ import { SecComponent } from './kish/sec/sec.component';
 import { FirstComponent as FirstComponentKish } from './kish/first/first.component';
 import { JoshComponent } from './josh/josh.component';
 import { JoshDirective } from './josh.directive';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { JoshDirective } from './josh.directive';
     JoshComponent,
     FirstComponentKish,
     JoshDirective,
+    ChildComponent,
   ],
   imports: [BrowserModule, ReactiveFormsModule, FormsModule],
   providers: [],

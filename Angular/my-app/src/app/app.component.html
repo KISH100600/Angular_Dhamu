@@ -1,3 +1,6 @@
+<h1>{{ title }}</h1>
+<h1>{{ name }}</h1>
+<h1>{{ getAge() }}</h1>
 <!-- <h1>Welcome</h1>
 
 <h1>{{ title }}</h1>
@@ -106,12 +109,17 @@
   <button type="submit" (click)="updateEmail()">change Email</button>
 </form> -->
 
-<select #customSelect (change)="selectMethod(customSelect.value)">
+<!-- <select #customSelect (change)="selectMethod(customSelect.value)">
+  <option *ngFor="let item of userData" value="{{ item.name }}">
+    {{ item.name }}
+  </option>
+</select> -->
+
+<!-- <select [(ngModel)]="selectedName">
   <option *ngFor="let item of userData" value="{{ item.name }}">
     {{ item.name }}
   </option>
 </select>
-
 <p>
   {{ selectedName }}
 </p>
@@ -121,6 +129,8 @@
   <div *ngSwitchCase="'user 1'">this is the name user 1</div>
   <div *ngSwitchCase="'user 2'">this is the name user 2</div>
   <div *ngSwitchDefault>output2</div>
-</div>
+</div> -->
+<app-first-parent></app-first-parent>
+<!-- <app-josh></app-josh> -->
 
-<app-josh-first></app-josh-first>
+<!-- <app-first-kish></app-first-kish> -->

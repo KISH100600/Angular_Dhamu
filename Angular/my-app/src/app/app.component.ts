@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+// import { FormControl } from '@angular/forms';
 import names from './interFile';
 
 // const image = require('../assets/first.jpg');
@@ -17,11 +17,12 @@ export class AppComponent {
   private age = 10;
   loading = true;
   selectedValue = 'kish';
-  email = new FormControl('hshs');
+  // email = new FormControl('hshs');
   selectedName: String = 'kish';
-  updateEmail() {
-    this.email.setValue('hhs@gmail.com');
-  }
+
+  // updateEmail() {
+  //   this.email.setValue('hhs@gmail.com');
+  // }
 
   image =
     'https://camo.githubusercontent.com/0a16218f80a1832b5244500de2367b6985e2077efc4cd1f0c71dc38a4a348740/68747470733a2f2f6a656e6b696e732e696f2f696d616765732f6c6f676f732f6a656e6b696e732f6a656e6b696e732e706e67';

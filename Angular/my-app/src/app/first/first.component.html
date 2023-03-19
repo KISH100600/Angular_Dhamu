@@ -1,1 +1,12 @@
-<p>first works!</p>
+<div class="parent">
+  <div class="parentcontainer">
+    <h1>This is a parent data ->> {{ data }}</h1>
+    <button (click)="changeData()">change data Parent</button>
+    <br />
+
+    <br />
+  </div>
+  <app-child [childData]="data" (voted)="onVoted($event)"></app-child>
+  <br />
+  <!-- <app-child [childData]="data"></app-child> -->
+</div>

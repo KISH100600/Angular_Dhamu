@@ -1,1 +1,6 @@
 <p>first works!</p>
+<div style="display: flex; justify-content: space-around">
+  <div *ngFor="let item of userData">
+    <app-sec-kish [data]="item"></app-sec-kish>
+  </div>
+</div>

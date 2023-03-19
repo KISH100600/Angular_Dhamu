@@ -1,0 +1,16 @@
+<div class="parent">
+  <h1>This is a child data ->> {{ childData }}</h1>
+  <button (click)="changeChildData()">change data Parent</button>
+  <br />
+  <div *ngFor="let item of history">
+    <h1>
+      The Data hase chnages to {{ item["currentValue"] }} from
+      {{ item["prevousData"] }}
+    </h1>
+  </div>
+  <button type="button" (click)="vote(true)" [disabled]="didVote">Agree</button>
+  <button type="button" (click)="vote(false)" [disabled]="didVote">
+    Disagree
+  </button>
+  <br />
+</div>
