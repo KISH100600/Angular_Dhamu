@@ -1,0 +1,15 @@
+<p>productdetails works!</p>
+
+<div>
+  <h1>Product Name -{{ product?.name }}</h1>
+  <h1>Product Price-{{ product?.price }}</h1>
+  <h1>Product Details-{{ product?.details }}</h1>
+</div>
+<h1 style="color: blue">Releated elements</h1>
+<div style="display: flex">
+  <div style="border: 2px solid red" *ngFor="let product of productsData">
+    <h1>Product Name -{{ product?.name }}</h1>
+    <h1>Product Price-{{ product?.price }}</h1>
+    <h1>Product Details-{{ product?.details }}</h1>
+  </div>
+</div>

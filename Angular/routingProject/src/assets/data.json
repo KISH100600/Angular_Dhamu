@@ -1,0 +1,7 @@
+[
+  { "details": "E-gadget", "price": 1000, "name": "phone 2", "id": 1 },
+  { "details": "E-gadget", "price": 1000, "name": "laptop 2"," id": 2 },
+  { "details": "Electronic", "price": 1000, "name": "tv 2", "id": 3 },
+  { "details": "Electronic", "price": 1000, "name": "ac", "id": 4 },
+  { "details": "E-gadget", "price": 1000, "name": "mouse", "id": 5 }
+]

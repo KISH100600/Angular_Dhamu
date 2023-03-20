@@ -1,0 +1,52 @@
+/* <p>productlist works !</p><input (ngModelChange)="didModify($event)"
+placeholder="type to search"
+[(ngModel)]="filterElement"
+
+/><h1> {
+        {
+        filterElement
+    }
+}
+
+</h1><div *ngIf="
+(filterElement && filteredData.length) || ( !filterElement && shippingCosts.length);
+else noDataFound "
+><table border="2"><tr><th>Id</th><th>Name</th><th>username</th><th>phone</th></tr><tr style="text-align: center"
+*ngFor="
+ let product of filterElement ? filteredData : shippingCosts;
+index as i "
+><td><h3>< !-- <a [title]="product.name + ' details' + i"
+[routerLink]="[product.name, product.id, product.details]"
+
+>--> {
+        {
+        i+1
+    }
+}
+
+< !-- </a>--></h3></td><td><h3>< !-- <a [title]="product.name + ' details' + i"
+[routerLink]="[product.name, product.id, product.details]"
+
+>--> {
+        {
+        product.name
+    }
+}
+
+< !-- </a>--></h3></td><td>< !-- <button (click)="addToCart(product)">Add to cart</button>--> {
+        {
+        product.username
+    }
+}
+
+</td><td>< !-- <button (click)="addToCart(product)">Add to cart</button>--> {
+        {
+        product.phone
+    }
+}
+
+</td>< !-- . . . --></tr></table></div><ng-template #noDataFound>No Data Found !</ng-template><button [routerLink]="['/viewCart']" *ngIf="cartService.getItems().length">view Cart ({
+        {
+        cartService.getItems().length
+    }
+}) </button><router-outlet></router-outlet> */
