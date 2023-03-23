@@ -4,10 +4,10 @@ import { RouterModule, Route } from '@angular/router';
 import { CartComponent } from './cart/cart.component';
 
 export interface Product {
-  name: string;
-  id: number;
-  details: string;
-  price: number;
+  name?: string;
+  id?: number;
+  details?: string;
+  price?: number;
   username?: string;
   phone?: string;
 }

@@ -9,8 +9,11 @@ import { UserService } from '../user.service';
 })
 export class CartComponent {
   constructor(private cart: UserService) {}
-  cartDetails: Product[] = [];
+  cartDetails: Product = {};
   ngOnInit() {
-    this.cartDetails = this.cart.getItems();
+    this.cart.getTheUser().subscribe((a: any) => (this.cartDetails = a.body));
+  }
+  getData() {
+    this.cart.getBookings().subscribe((a: any) => console.log(a));
   }
 }

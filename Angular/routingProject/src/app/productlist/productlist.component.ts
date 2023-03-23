@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Product, products } from '../arrays';
 import { UserService } from '../user.service';
+import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-productlist',
@@ -12,7 +14,9 @@ import { UserService } from '../user.service';
 export class ProductlistComponent {
   constructor(
     public cartService: UserService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private coockie: CookieService
   ) {}
   shippingCosts: Product[] = [];
   filteredData: Product[] = [];
@@ -22,8 +26,19 @@ export class ProductlistComponent {
     password: '',
   });
   onSubmit(): void {
-    this.cartService.login(this.checkoutForm.value);
-    alert('Successfully login');
+    this.cartService.login(this.checkoutForm.value).subscribe(
+      (a: any) => {
+        const token = a.headers.get('X-Auth-Token');
+        this.router.navigate(['viewCart']);
+        sessionStorage.setItem('token', token);
+        localStorage.setItem('name', token);
+        this.coockie.set('name', token);
+      },
+      (err: any) => {
+        alert('Invalid user name or password');
+      }
+    );
+    // alert('Successfully login');
     // Process checkout data here
     // this.items = this.cartService.clearCart();
     // console.warn('Your order has been submitted', this.checkoutForm.value);

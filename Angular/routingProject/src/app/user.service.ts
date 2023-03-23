@@ -30,20 +30,43 @@ export class UserService {
     );
   }
   login(data: any) {
-    console.log(data);
-
-    return this.http
-      .get<Product[]>(
-        `http://13.126.240.130:3001/api/auth/login?email=${data.name}&password=${data.password}`,
-        {
-          observe: 'body',
-          responseType: 'json',
-          headers: { Authorzation: 'djjd' },
-        }
-      )
-      .subscribe((a: any) => console.log('working'));
+    return this.http.get<Product[]>(
+      `http://13.233.39.109:8080/api/service/rest/user/getCurrentUser`,
+      {
+        observe: 'response',
+        responseType: 'json',
+        headers: {
+          Authorization: 'Basic ' + btoa(`${data.name}:${data.password}`),
+        },
+      }
+    );
   }
-
+  getTheUser() {
+    const token = sessionStorage.getItem('token');
+    return this.http.get<Product[]>(
+      `http://13.233.39.109:8080/api/service/rest/user/getCurrentUser`,
+      {
+        observe: 'response',
+        responseType: 'json',
+        headers: {
+          'X-Auth-Token': token ? token : '',
+        },
+      }
+    );
+  }
+  getBookings() {
+    const token = sessionStorage.getItem('token');
+    return this.http.get<Product[]>(
+      `http://13.233.39.109:8080/api/service/rest/slot/getAllVendorsBookingHistory?date=2023-03-20`,
+      {
+        observe: 'response',
+        responseType: 'json',
+        headers: {
+          'X-Auth-Token': token ? token : '',
+        },
+      }
+    );
+  }
   clearCart() {
     this.items = [];
     return this.items;

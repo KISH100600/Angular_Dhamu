@@ -9,6 +9,7 @@ import { ProductdetailsComponent } from './productdetails/productdetails.compone
 import { ProductlistComponent } from './productlist/productlist.component';
 import { CartComponent } from './cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
+    NgbModule,
     RouterModule.forRoot(Routes),
     HttpClientModule,
     FormsModule,

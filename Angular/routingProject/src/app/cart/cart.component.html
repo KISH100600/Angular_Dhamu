@@ -1,14 +1,5 @@
-<p>Items from the cart works!</p>
+<p>Successfully login</p>
 
-<div style="display: flex" *ngFor="let product of cartDetails; index as i">
-  <h3>
-    <!-- <a
-      [title]="product.name + ' details' + i"
-      [routerLink]="[product.name, product.id, product.details]"
-    > -->
-    {{ i + 1 }} - {{ product.name }}
-    <!-- </a> -->
-  </h3>
-  <!-- <button (click)="addToCart(product)">Add to cart</button> -->
-  <!-- . . . -->
-</div>
+<h1>{{ cartDetails.name }}</h1>
+
+<button (click)="getData()">Get Data</button>
